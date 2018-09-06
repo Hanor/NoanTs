@@ -1,5 +1,18 @@
-# NoanTs
+## NoanTs
 
+This boilerplate was created to help developers to build an application with Angular as frontend and
+node.js with Typescript as backend. Also, the backend will serve the angular build files.
+
+## Install
+
+You should install the projects dependencies of environment like:
+
+ - Node.js;
+ - NPM;
+ - @angular/cli (npm install -g @angular/cli);
+ - typescript (npm install -g typescript);
+
+Then run npm install. Now you can desenvole your application.
 
 ## LICENSE
 
