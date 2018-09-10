@@ -1,0 +1,6 @@
+{
+    "watch": ["engine/src"],
+    "ext": "ts",
+    "ignore": ["engine/src/**/*.spec.ts", "node_modules/**", "engine/src/**/*.js"],
+    "exec": "npm run build-engine && node dist/engine/main.js --properties-file=application.properties.yml"
+  }

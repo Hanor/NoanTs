@@ -5,18 +5,10 @@
       "outDir": "../dist/engine",
       "sourceMap": true
     },
-    "include": [
-      "src/**/*.ts",
-      "src/*.ts"
-    ],
-    "typeRoots": [
-      "node_modules/@types"
-    ],
-    "lib": [
-      "es2017",
-      "dom"
-    ],
     "exclude": [
       "../node_modules"
+    ],
+    "include": [
+      "src/**/*.ts"
     ]
 }
