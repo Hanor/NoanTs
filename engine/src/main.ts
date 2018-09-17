@@ -1,13 +1,15 @@
-import { System } from './core/system';
+import {Application, Inject} from './configuration/noants/decorators';
+import {NoAnTsConfiguration} from './configuration/noants/noandts.configuration';
 
+import {ExampleRest} from './example/example.rest';
+
+@Application
 export class Main {
-    private system: System;
-    constructor(private args: Array<string>) {
-        this.start();
-    }
-    start() {
-        this.system = new System(this.args);
-    }
-}
 
-const main: Main = new Main(process.argv);
+  @Inject applicationContext: NoAnTsConfiguration;
+  @Inject exampleRest: ExampleRest;
+
+  constructor(private args: Array<string>) {
+    this.applicationContext.run(args);
+  }
+}
