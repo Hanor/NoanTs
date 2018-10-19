@@ -8,7 +8,7 @@ export class ExampleRest {
 
   @Inject exampleService: ExampleService;
 
-  @Get('/api/getExample')
+  @Get(['/api/getExample'])
   exampleGet(query: any): ExampleEntity {
       const example: ExampleEntity = this.exampleService.getAllById(query.id);
       if (!example) {
@@ -16,7 +16,7 @@ export class ExampleRest {
       }
       return example;
   }
-  @Post('/api/postExample')
+  @Post(['/api/postExample'])
   examplePost(example: ExampleEntity) {
       console.log(example);
   }

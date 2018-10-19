@@ -1,1 +1,64 @@
-@import '../styles.scss';
+@import "../styles.scss";
+
+
+.ui-nav-bar {
+    float: left;
+    height: 100%;
+    width: 250px;
+    background: $ui-second-background-color;
+}
+.ui-nav-bar-retract {
+    float: left;
+    height: 100%;
+    width: 60px;
+    background: $ui-second-background-color;
+}
+.ui-container {
+    float: left;
+    height: 100%;
+    width: calc(100% - 250px);
+}
+.ui-container-retract {
+    float: left;
+    height: 100%;
+    width: calc(100% - 60px);
+}
+.ui-container-full {
+    float: left;
+    height: 100%;
+    width: 100%;
+}
+
+.ui-header {
+    float: left;
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    padding-left: 40px;
+    background: $ui-primary-background-color;
+    color: $ui-primary-text-color;
+}
+
+.ui-header > span {
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.ui-right {
+    float: right;
+}
+
+.ui-option-name {
+    float: left;
+    margin-left: 20px;
+    font-size: 14px;
+    line-height: 40px;
+    color: $ui-primary-text-color;
+}
+.ui-option-icon {
+    float: left;
+    font-size: 16px;
+    line-height: 40px;
+    color: $ui-primary-text-color;
+    margin-left: 15px;
+}

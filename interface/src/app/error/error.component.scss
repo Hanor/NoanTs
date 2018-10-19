@@ -1,0 +1,27 @@
+@import "../app.component.scss";
+
+.ui-error-header {
+    background: $ui-quartile-background-color;
+    color: $ui-primary-text-color;
+    height: 70px;
+}
+
+.ui-error-header span {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.ui-error-message {
+    float: left;
+    width: 100%;
+    height: calc(100% - 150px);
+    text-align: center;
+    font-size: 20px;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    color: $ui-third-text-color;
+}
+.ui-error-message span {
+    margin: auto;
+}

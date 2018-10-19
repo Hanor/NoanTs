@@ -1,0 +1,77 @@
+@import "../app.component.scss";
+
+.ui-login {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    color: $ui-primary-text-color;
+    padding-bottom: 40px;
+    background: $ui-primary-background-color;
+}
+
+.ui-login-container {
+    margin: auto;
+    padding: 20px;
+}
+
+.ui-login-header {
+    text-align: center;
+    padding-bottom: 40px;
+    font-size: 20px;
+}
+.ui-login-body {
+    display: flex;
+    align-content: center;
+    align-items: center;
+}
+
+.ui-login-field {
+    float: none;
+    display: block;
+    margin-top: 10px;
+    height: 40px;
+    font-size: 14px;
+}
+.ui-login-body-avatar {
+    text-align: center;
+    padding-top: 30px;
+    padding-left: 50px;
+}
+.ui-login-body-form {
+    padding-left: 60px;
+}
+.ui-login-user-icon {
+    font-size: 70px;
+    display: block;
+}
+
+.ui-login-password-forgot {
+    display: block;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.ui-btn-login {
+    margin-left: 40px;
+    margin-top: 50px;
+}
+
+.ui-login-system-logo {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-content: center;
+    align-items: center;
+}
+.ui-login-system-name {
+    padding-top: 20px;
+    padding-left: 20px;
+}
+.ui-login-system-logo img {
+    width: 80px;
+    height: 80px;
+    margin: auto;
+}

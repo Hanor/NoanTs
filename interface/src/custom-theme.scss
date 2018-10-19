@@ -1,0 +1,27 @@
+@import "./variables.scss";
+@import '~@angular/material/theming';
+@include mat-core();
+
+$custom-theme-primary: mat-palette($ui-primary, 50, 100, 300);
+$custom-theme-accent: mat-palette($ui-secondary, 200);
+$custom-theme-warn: mat-palette($ui-third, 200);
+
+
+$custom-dark-theme: mat-dark-theme(
+    $custom-theme-primary,
+    $custom-theme-accent,
+    $custom-theme-warn
+);
+$custom-light-theme: mat-light-theme(
+    $custom-theme-primary,
+    $custom-theme-accent,
+    $custom-theme-warn
+);
+
+@include angular-material-theme($custom-light-theme);
+
+// Theming specified angular material components
+@include mat-button-theme($custom-dark-theme);
+@include mat-checkbox-theme($custom-dark-theme);
+@include mat-form-field-theme($custom-dark-theme);
+@include mat-input-theme($custom-dark-theme);

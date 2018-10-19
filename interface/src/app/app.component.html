@@ -1,1 +1,6 @@
-<app-example></app-example>
+<div [hidden] = "!user" [ngClass] = "{'ui-nav-bar': !navBarRetract, 'ui-nav-bar-retract': navBarRetract}">
+  <nav-bar></nav-bar>
+</div>
+<div [ngClass] =  "{'ui-container': user && !navBarRetract, 'ui-container-retract': user && navBarRetract, 'ui-container-full': !user}">
+  <router-outlet></router-outlet>
+</div>

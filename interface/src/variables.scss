@@ -1,0 +1,117 @@
+/*
+* Palette
+*/
+$ui-primary: (
+    50 : #e0f3fc,
+    100 : #b3e2f8,
+    200 : #80cef3,
+    300 : #4dbaee,
+    400 : #26acea,
+    500 : #009de6,
+    600 : #0095e3,
+    700 : #008bdf,
+    800 : #0081db,
+    900 : #006fd5,
+    A100 : #fcfeff,
+    A200 : #c9e2ff,
+    A400 : #96c7ff,
+    A700 : #7db9ff,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+$ui-secondary: (
+    50 : #e0fbec,
+    100 : #b3f5cf,
+    200 : #80eeaf,
+    300 : #4de78e,
+    400 : #26e276,
+    500 : #00dd5e,
+    600 : #00d956,
+    700 : #00d44c,
+    800 : #00cf42,
+    900 : #00c731,
+    A100 : #effff2,
+    A200 : #bcffc8,
+    A400 : #89ff9e,
+    A700 : #6fff89,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #000000,
+        700 : #000000,
+        800 : #000000,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+
+$ui-third: (
+    50 : #ffe7e7,
+    100 : #ffc3c3,
+    200 : #ff9b9b,
+    300 : #ff7272,
+    400 : #ff5454,
+    500 : #ff3636,
+    600 : #ff3030,
+    700 : #ff2929,
+    800 : #ff2222,
+    900 : #ff1616,
+    A100 : #ffffff,
+    A200 : #fffcfc,
+    A400 : #ffc9c9,
+    A700 : #ffafaf,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+$ui-primary-background-color: rgb(0, 136, 190);
+$ui-primary-text-color: rgb(255, 255, 255);
+$ui-primary-shadow-color: rgb(73, 73, 73);
+$ui-primary-border-color: rgb(73, 73, 73);
+
+$ui-second-background-color: rgb(48, 48, 48);
+$ui-second-shadow-color:rgba(0,0,0,0.1);
+$ui-second-text-color: rgb(0, 136, 190);
+$ui-second-border-color: rgb(95, 95, 95);
+
+$ui-third-background-color: rgb(95, 95, 95);
+$ui-third-text-color: rgb(48, 48, 48);
+
+$ui-quartile-background-color: rgb(255, 54, 54);
