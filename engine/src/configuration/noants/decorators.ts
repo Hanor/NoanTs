@@ -48,7 +48,7 @@ export function Get(args: Array<any>) {
           if (executionMessage === 'authorized') {
             try {
               if (path.includes(':')) {
-                const result: any = target[propertyKey](req.param[path.split(':')[1]]);
+                const result: any = target[propertyKey](req.params[path.split(':')[1]]);
                 res.send(result);
               } else {
                 const result: any = target[propertyKey](req.query);

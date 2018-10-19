@@ -2,7 +2,7 @@ import {Repository} from '../configuration/noants/decorators';
 import { UserEntity } from './user.entity';
 
 //this is an example;
-const mockUser: UserEntity = new UserEntity(19, 'vader', 'vader@dinasty.star', 'Anakin', 'Skywalker', ['admin'], 'asdba3Wqw123LoasdpqweIU123IKascvdDd');
+const mockUser: UserEntity = new UserEntity(19, 'admin', 'vader@dinasty.star', 'Anakin', 'Skywalker', ['admin'], 'asdba3Wqw123LoasdpqweIU123IKascvdDd');
 
 @Repository
 export class UserRepository {

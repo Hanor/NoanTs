@@ -15,13 +15,13 @@ export class UserRest {
     return this.authenticationService.doSignIn(signInForm.login, signInForm.password);
   }
 
-  @Get(['/api/signOut/:login', true])
+  @Get(['/api/signOut/:username', true])
   signOut(username: string): any {
     return this.authenticationService.doSignOut(username);
   }
 
-  @Get(['/api/signedUser/:login', true])
-  signedUser(login: string): UserEntity {
-    return this.userService.getUserByLogin(login);
+  @Get(['/api/signedUser/:username', true])
+  signedUser(username: string): UserEntity {
+    return this.userService.getUserByLogin(username);
   }
 }

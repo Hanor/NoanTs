@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { OnDestroy } from '@angular/core/src/metadata/lifecycle_hooks';
 import { UserModel } from '../shared/models/user.model';
@@ -17,7 +17,7 @@ export class NavBarComponent implements OnInit, OnDestroy {
   
   states: Array<State> = new Array();
   user: UserModel;
-
+  
   constructor(
     private router: Router,
     private userService: UserService,
@@ -25,7 +25,6 @@ export class NavBarComponent implements OnInit, OnDestroy {
   ) {}
 
   ngOnInit(): void {
-
     this.initializeStates();
     this.loadState(this.getUrlFatherPath(this.router.url));
     
@@ -39,7 +38,7 @@ export class NavBarComponent implements OnInit, OnDestroy {
     this.userService.signOut();
   }
   doRetract(): void {
-    this.appComponent.setNavBarRetract(!this.appComponent.navBarRetract);
+    this.appComponent.eventRetract();
   }
   eventUserChange(): void {
     this.subscriptions$.add(this.userService.currentUser$.subscribe((user: UserModel) => this.user = user));
