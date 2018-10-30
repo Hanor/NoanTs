@@ -20,7 +20,7 @@ export class AppComponent implements OnInit{
 
   ngOnInit(): void {
     this.systemService.systemId = this.systemName.replace(/ /g, '');
-    this.retracted = Boolean(this.systemService.getSessionVariable('retracted'));
+    this.retracted = (this.systemService.getSessionVariable('retracted') === 'true') ? true : false;
     this.user = this.systemService.getSessionVariableAsJson('currentUser');
     this.userService.currentUser$.next(this.user);
     
