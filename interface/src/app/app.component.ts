@@ -1,4 +1,4 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, OnInit, HostListener} from '@angular/core';
 import { SystemService } from './system/system.service';
 import { UserService } from './user/user.service';
 import { UserModel } from './shared/models/user.model';
@@ -10,8 +10,9 @@ import { UserModel } from './shared/models/user.model';
 })
 export class AppComponent implements OnInit{
   retracted: boolean = false;
-  systemName: string = 'Projeto X';
+  systemName: string = 'X-X';
   user: UserModel;
+  
 
   constructor(
     private systemService: SystemService,
@@ -20,11 +21,23 @@ export class AppComponent implements OnInit{
 
   ngOnInit(): void {
     this.systemService.systemId = this.systemName.replace(/ /g, '');
-    this.retracted = (this.systemService.getSessionVariable('retracted') === 'true') ? true : false;
+    this.retracted = this.wasUserRetracted();
     this.user = this.systemService.getSessionVariableAsJson('currentUser');
     this.userService.currentUser$.next(this.user);
     
+    this.interfaceAdjust(window.innerWidth);
     this.eventUserChange();
+  }
+  interfaceAdjust(width: number) {
+    if (!this.retracted && width < 670) {
+      this.retracted = true;
+    } else if (this.retracted && !this.wasUserRetracted()) {
+      this.retracted = false;
+    }
+  }
+  @HostListener('window:resize', ['$event'])
+  eventResize(event) {
+    this.interfaceAdjust(event.target.innerWidth);
   }
   eventRetract() {
     this.retracted = !this.retracted;
@@ -32,5 +45,8 @@ export class AppComponent implements OnInit{
   }
   eventUserChange() {
     this.userService.currentUser$.subscribe((user) => this.user = user);
+  }
+  wasUserRetracted() {
+    return (this.systemService.getSessionVariable('retracted') === 'true') ? true : false
   }
 }

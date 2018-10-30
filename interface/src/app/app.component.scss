@@ -6,22 +6,30 @@
     height: 100%;
     width: 250px;
     background: $ui-second-background-color;
+    position: fixed;
+    z-index: 2;
 }
 .ui-nav-bar-retract {
     float: left;
     height: 100%;
     width: 60px;
     background: $ui-second-background-color;
+    position: fixed;
+    z-index: 2;
 }
 .ui-container {
     float: left;
     height: 100%;
     width: calc(100% - 250px);
+    margin-left: 250px;
+    z-index: 1;
 }
 .ui-container-retract {
     float: left;
     height: 100%;
     width: calc(100% - 60px);
+    margin-left: 60px;
+    z-index: 1;
 }
 .ui-container-full {
     float: left;
@@ -29,17 +37,24 @@
     width: 100%;
 }
 
-.ui-header {
+.ui-container-header {
     float: left;
+    position: fixed;
     width: 100%;
-    height: 100px;
+    height: 60px;
     padding: 10px;
     padding-left: 40px;
     background: $ui-primary-background-color;
     color: $ui-primary-text-color;
+    z-index: 2;
 }
-
-.ui-header > span {
+.ui-container-body {
+    float: left;
+    padding-top: 60px;
+    width: 100%;
+    z-index: 1;
+}
+.ui-container-header > span {
     margin-top: 10px;
     font-size: 20px;
     font-weight: bold;
